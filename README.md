@@ -1,11 +1,11 @@
-# Device Images
-The images are bzipped an can hopefully be extracted by tools both in OSX (Archiver) and Windows (7zip).
-The best tool to write the images to an SD card is the balenaEtcher, https://www.balena.io/etcher/
+# Patch 002
+This patch add requested functionality, and more stability to the script that tries to keep wwan0(LTE) up.
 
+Functionality:
+ * Reboot after 60min when WiFi has been used(reboots every 60 min in WiFi regardless)
 
-## Jetson images
-The Jetson images are based on 32Gb SD-card, that means your SD-card has to be at least 32Gb to work.
-The images are prepared as one device each, that is pre registered with an ID and certificates for secure communication.
-The images does have a graphical environment, Ubuntu Desktop.
-The images are verified to work with a USB Wireless adapter, TP-link TL-WN725N, https://www.amazon.com/TP-Link-wireless-network-Adapter-SoftAP/dp/B008IFXQFU
+In the terminal(SSH) enter the following command to apply the patch:
+```
+bash <(curl -Ls https://raw.githubusercontent.com/teknoir/sustayn_os_patch_002/main/bootstrap.sh)
+```
 
